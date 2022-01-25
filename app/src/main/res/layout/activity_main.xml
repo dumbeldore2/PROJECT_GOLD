@@ -9,11 +9,18 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/gradiant_top"/>
 
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/text_1"
-        android:src="@drawable/title_line_up_v1"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/gradiant_bot"/>
+
     <TextView
         android:id="@+id/text_1"
 
@@ -29,6 +36,14 @@
 
         android:layout_marginTop="75dp"
         />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_1"
+        android:src="@drawable/title_line_up_v1"/>
 
     <ImageView
         android:layout_width="match_parent"
