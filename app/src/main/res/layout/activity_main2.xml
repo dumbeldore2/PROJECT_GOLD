@@ -8,17 +8,46 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/gradiant_top"/>
-
-    <ImageView
-        android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:src="@drawable/gradiant_bot"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:src="@drawable/gradiant_top"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="2500dp"
+
+                android:layout_alignParentTop="true"
+                android:text="home"
+                android:textColor="@color/c_5"
+                android:textSize="52dp"
+
+                android:gravity=""
+
+                android:layout_marginLeft="10dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
