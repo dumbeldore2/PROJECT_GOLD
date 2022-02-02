@@ -18,9 +18,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp">
+            android:layout_height="200dp">
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -36,26 +36,115 @@
                 android:id="@+id/text_1"
 
                 android:layout_width="wrap_content"
-                android:layout_height="2500dp"
+                android:layout_height="200dp"
 
-                android:layout_alignParentTop="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
                 android:text="home"
                 android:textColor="@color/c_5"
                 android:textSize="52dp"
 
-                android:gravity=""
-
-                android:layout_marginLeft="10dp"
-                />
-        </RelativeLayout>
+                android:gravity="center"
+                android:layout_margin="5dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp">
+            android:layout_height="150dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/text_2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:text="goal : "
+                android:textSize="24dp"
+                android:textColor="@color/c_5"/>
+
+            <TextView
+                android:id="@+id/text_3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toEndOf="@id/text_2"
+                app:layout_constraintTop_toTopOf="@id/text_2"
+
+                android:text="150€"
+                android:textSize="24dp"
+                android:textColor="@color/c_5"/>
+
+            <TextView
+                android:id="@+id/text_4"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:text="17/11/2000"
+                android:textSize="24dp"
+                android:textColor="@color/c_5"/>
+
+            <TextView
+                android:id="@+id/text_5"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toStartOf="@id/text_4"
+                app:layout_constraintTop_toTopOf="@id/text_4"
+
+                android:text="tot : "
+                android:textSize="24dp"
+                android:textColor="@color/c_5"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_2">
+
+                <TextView
+                    android:id="@+id/text_6"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="momenteel : "
+                    android:textSize="24dp"
+                    android:textColor="@color/c_5"/>
+
+                <TextView
+                    android:id="@+id/text_7"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toEndOf="@id/text_6"
+                    app:layout_constraintTop_toTopOf="@id/text_6"
+
+                    android:text=" + 100€ "
+                    android:textSize="24dp"
+                    android:textColor="@color/c_6"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/line_chart"
