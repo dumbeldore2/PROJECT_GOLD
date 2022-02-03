@@ -160,7 +160,7 @@
 
                 android:layout_marginTop="15dp"
 
-                android:progress="90"
+                android:progress="100"
                 android:progressDrawable="@drawable/gradiant_progressbar"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
