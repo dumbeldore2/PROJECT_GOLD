@@ -19,6 +19,8 @@
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_1"
+
             android:layout_width="match_parent"
             android:layout_height="200dp">
 
@@ -51,6 +53,8 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_2"
+
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="10dp">
@@ -107,6 +111,8 @@
                 android:textSize="24dp"
                 android:textColor="@color/c_5"/>
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_3"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -141,17 +147,42 @@
                     android:textColor="@color/c_6"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <ProgressBar
+                android:id="@+id/progressBar_1"
 
+                style="@android:style/Widget.ProgressBar.Horizontal"
 
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraint_3"
+
+                android:layout_marginTop="15dp"
+
+                android:progress="90"
+                android:progressDrawable="@drawable/gradiant_progressbar"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_4"
 
-        <com.github.mikephil.charting.charts.LineChart
-            android:id="@+id/line_chart"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_1"/>
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
