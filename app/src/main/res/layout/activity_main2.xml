@@ -163,6 +163,21 @@
                 android:progress="100"
                 android:progressDrawable="@drawable/gradiant_progressbar"/>
 
+            <TextView
+                android:id="@+id/text_8"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="@id/progressBar_1"
+                app:layout_constraintEnd_toEndOf="@id/progressBar_1"
+                app:layout_constraintTop_toTopOf="@id/progressBar_1"
+                app:layout_constraintBottom_toBottomOf="@id/progressBar_1"
+
+
+                android:text="33%"
+                android:textSize="24dp"
+                android:textColor="@color/c_8"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_4"
