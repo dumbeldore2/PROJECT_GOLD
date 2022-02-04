@@ -160,7 +160,7 @@
 
                 android:layout_marginTop="15dp"
 
-                android:progress="100"
+                android:progress="33"
                 android:progressDrawable="@drawable/gradiant_progressbar"/>
 
             <TextView

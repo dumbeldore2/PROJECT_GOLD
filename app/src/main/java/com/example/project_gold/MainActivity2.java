@@ -43,31 +43,63 @@ public class MainActivity2 extends AppCompatActivity {
         //linechart stuff
         ArrayList<Entry> yvalues = new ArrayList<>();
 
-        yvalues.add(new Entry(0,10));
-        yvalues.add(new Entry(1,50));
-        yvalues.add(new Entry(2,10));
-        yvalues.add(new Entry(3,10));
-        yvalues.add(new Entry(4,90));
-        yvalues.add(new Entry(5,10));
-        yvalues.add(new Entry(6,10));
-        yvalues.add(new Entry(7,-100));
-        yvalues.add(new Entry(8,-300));
+        yvalues.add(new Entry(0,-10));
+        yvalues.add(new Entry(1,-50));
+        yvalues.add(new Entry(2,-10));
+        yvalues.add(new Entry(3,-10));
+        yvalues.add(new Entry(4,-90));
+        yvalues.add(new Entry(5,-10));
+        yvalues.add(new Entry(6,-10));
+        yvalues.add(new Entry(7,0));
+        yvalues.add(new Entry(8,0));
         yvalues.add(new Entry(9,0));
 
         LineDataSet lineDataSet = new LineDataSet(yvalues, "Data set 1");
 
+        //pos of negatieve background van de chart
+        float minYwaarde = 0;
+        float maxYwaarde = 0;
+        for (int i = 0 ; i < yvalues.size() ; i++){
+            //System.out.println(yvalues.get(i).getY());
 
-        //Drawable drawable = ContextCompat.getDrawable(this, R.drawable.background_2);
+            //dit zoekt naar de laagste
+            if (yvalues.get(i).getY() <= minYwaarde){
+                minYwaarde = yvalues.get(i).getY();
+            }
+
+            //deze zoekt naar de hoogste
+            if (yvalues.get(i).getY() >= maxYwaarde){
+                maxYwaarde = yvalues.get(i).getY();
+            }
+        }
+        //test bovenstaande functies
+        //System.out.println(minYwaarde);
+        //System.out.println(maxYwaarde);
+
+        //functie die beslist welke drawable best gebruikt word in deze situatie
+        // de eerste is de default ²
+        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.gradiant_background_chart_pos_neg_v1);
+        if (minYwaarde < 0 && maxYwaarde > 0){
+            drawable = ContextCompat.getDrawable(this, R.drawable.gradiant_background_chart_pos_neg_v1);
+        } else {
+            if (minYwaarde < 0 && maxYwaarde == 0){
+               drawable = ContextCompat.getDrawable(this, R.drawable.gradiant_background_chart_neg_v1);
+            } else {
+                if (minYwaarde == 0 && maxYwaarde > 0){
+                   drawable = ContextCompat.getDrawable(this, R.drawable.gradiant_background_chart_pos_v1);
+                }
+            }
+        }
 
         lineChart.setHighlightPerDragEnabled(false);
         lineChart.setHighlightPerTapEnabled(false);
         lineDataSet.setDrawCircleHole(false);
         lineDataSet.setDrawCircles(false);
-        lineDataSet.setColor(Color.rgb(0,250,154));
+        lineDataSet.setColor(ContextCompat.getColor(this,R.color.c_3));
         lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
 
         lineDataSet.setDrawFilled(true);
-        //lineDataSet.setFillDrawable(drawable);
+        lineDataSet.setFillDrawable(drawable);
         XAxis xas = lineChart.getXAxis();
         xas.setPosition(XAxis.XAxisPosition.BOTTOM);
         xas.setDrawGridLines(false);
