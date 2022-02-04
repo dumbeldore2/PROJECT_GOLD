@@ -44,16 +44,16 @@ public class MainActivity2 extends AppCompatActivity {
         //linechart stuff
         ArrayList<Entry> yvalues = new ArrayList<>();
 
-        yvalues.add(new Entry(0,-10));
-        yvalues.add(new Entry(1,-50));
-        yvalues.add(new Entry(2,-10));
-        yvalues.add(new Entry(3,-10));
-        yvalues.add(new Entry(4,-90));
-        yvalues.add(new Entry(5,-10));
-        yvalues.add(new Entry(6,-10));
-        yvalues.add(new Entry(7,0));
-        yvalues.add(new Entry(8,0));
-        yvalues.add(new Entry(9,0));
+        yvalues.add(new Entry(0,-100));
+        yvalues.add(new Entry(1,-100));
+        yvalues.add(new Entry(2,-100));
+        yvalues.add(new Entry(3,-100));
+        yvalues.add(new Entry(4,-100));
+        yvalues.add(new Entry(5,100));
+        yvalues.add(new Entry(6,100));
+        yvalues.add(new Entry(7,100));
+        yvalues.add(new Entry(8,100));
+        yvalues.add(new Entry(9,100));
 
         LineDataSet lineDataSet = new LineDataSet(yvalues, "Data set 1");
 
@@ -100,10 +100,22 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
         LimitLine limitLine = new LimitLine(averageYwaarde,"gemidelde");
-        limitLine.setLineWidth(4);
-        limitLine.enableDashedLine(10,10,0);
+        limitLine.setLineWidth(2);
+        limitLine.enableDashedLine(30,15,0);
         limitLine.setLabelPosition(LimitLine.LimitLabelPosition.LEFT_BOTTOM);
         limitLine.setTextSize(12);
+        //functie voor kleur van de lijn voor de avererage
+        if (averageYwaarde > 0){
+            limitLine.setLineColor(ContextCompat.getColor(this,R.color.c_6));
+        } else {
+            if (averageYwaarde < 0){
+                limitLine.setLineColor(ContextCompat.getColor(this,R.color.c_7));
+            } else {
+                if (averageYwaarde == 0){
+                    limitLine.setLineColor(ContextCompat.getColor(this,R.color.c_1));
+                }
+            }
+        }
 
         lineChart.setHighlightPerDragEnabled(false);
         lineChart.setHighlightPerTapEnabled(false);
