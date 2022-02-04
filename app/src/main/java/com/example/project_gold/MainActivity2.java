@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.LimitLine;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
@@ -59,6 +60,8 @@ public class MainActivity2 extends AppCompatActivity {
         //pos of negatieve background van de chart
         float minYwaarde = 0;
         float maxYwaarde = 0;
+        float averageYwaarde = 0;
+
         for (int i = 0 ; i < yvalues.size() ; i++){
             //System.out.println(yvalues.get(i).getY());
 
@@ -71,10 +74,15 @@ public class MainActivity2 extends AppCompatActivity {
             if (yvalues.get(i).getY() >= maxYwaarde){
                 maxYwaarde = yvalues.get(i).getY();
             }
+
+            averageYwaarde += yvalues.get(i).getY();
         }
+        averageYwaarde = averageYwaarde / yvalues.size();
+
         //test bovenstaande functies
         //System.out.println(minYwaarde);
         //System.out.println(maxYwaarde);
+        System.out.println(averageYwaarde);
 
         //functie die beslist welke drawable best gebruikt word in deze situatie
         // de eerste is de default ²
@@ -91,6 +99,12 @@ public class MainActivity2 extends AppCompatActivity {
             }
         }
 
+        LimitLine limitLine = new LimitLine(averageYwaarde,"gemidelde");
+        limitLine.setLineWidth(4);
+        limitLine.enableDashedLine(10,10,0);
+        limitLine.setLabelPosition(LimitLine.LimitLabelPosition.LEFT_BOTTOM);
+        limitLine.setTextSize(12);
+
         lineChart.setHighlightPerDragEnabled(false);
         lineChart.setHighlightPerTapEnabled(false);
         lineDataSet.setDrawCircleHole(false);
@@ -105,11 +119,15 @@ public class MainActivity2 extends AppCompatActivity {
         xas.setDrawGridLines(false);
         xas.setEnabled(true);
 
+        //dit is alles van de rechtste yas
         YAxis yas = lineChart.getAxisRight();
         yas.setDrawGridLines(false);
         yas.setEnabled(false);
 
+        //dit is de linkse yas
         YAxis yas2 = lineChart.getAxisLeft();
+        yas2.removeAllLimitLines();
+        yas2.addLimitLine(limitLine);
         yas2.setDrawGridLines(false);
 
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
