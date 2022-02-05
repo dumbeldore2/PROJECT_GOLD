@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:orientation="vertical"
+            android:background="@drawable/background_gradiant_popup_activity2_constraint2">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_1"
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:layout_margin="10dp"
+
+                android:background="@drawable/background_constrtaints_popup_activity2_constraint2">
+
+                <TextView
+                    android:id="@+id/text_1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:gravity="center"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="goal : "
+                    android:textColor="@color/c_8"/>
+
+                <EditText
+                    android:id="@+id/edit_1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:gravity="center"
+
+                    app:layout_constraintStart_toStartOf="@id/text_1"
+                    app:layout_constraintTop_toBottomOf="@id/text_1"
+
+                    android:background="@drawable/background_inputfield_popup_activity2_constraint2"
+
+                    android:hint="goal .??"
+                    android:textColorHint="@color/c_1"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_2"
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:layout_margin="10dp"
+
+                android:background="@drawable/background_constrtaints_popup_activity2_constraint2">
+
+                <TextView
+                    android:id="@+id/text_2"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:gravity="center"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="tot : "
+                    android:textColor="@color/c_8"/>
+
+                <EditText
+                    android:id="@+id/edit_2"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:gravity="center"
+
+                    app:layout_constraintStart_toStartOf="@id/text_2"
+                    app:layout_constraintTop_toBottomOf="@id/text_2"
+
+                    android:background="@drawable/background_inputfield_popup_activity2_constraint2"
+
+                    android:hint="tot wanneer .??"
+                    android:textColorHint="@color/c_1"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_3"
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:layout_margin="10dp"
+
+                android:background="@drawable/background_constrtaints_popup_activity2_constraint2">
+
+                <TextView
+                    android:id="@+id/text_3"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:gravity="center"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="prgogress now : "
+                    android:textColor="@color/c_8"/>
+
+                <EditText
+                    android:id="@+id/edit_3"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:gravity="center"
+
+                    app:layout_constraintStart_toStartOf="@id/text_3"
+                    app:layout_constraintTop_toBottomOf="@id/text_3"
+
+                    android:background="@drawable/background_inputfield_popup_activity2_constraint2"
+
+                    android:hint=" hoeveel hebde nu al .??"
+                    android:textColorHint="@color/c_1"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_4"
+
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/text_4"
+
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:background="@drawable/background_button_popup_activty2_constraint2"
+
+                    android:text="opslaaan"
+                    android:textColor="@color/c_5"
+
+                    android:gravity="center"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
