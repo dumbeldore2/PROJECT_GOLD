@@ -2,12 +2,16 @@ package com.example.project_gold;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
+import android.app.Dialog;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 import com.github.mikephil.charting.charts.LineChart;
@@ -26,6 +30,12 @@ public class MainActivity2 extends AppCompatActivity {
     //iniiten van de variablelen
     LineChart lineChart;
 
+    //initen dialog
+    Dialog dialog;
+
+    //initen constraint
+    ConstraintLayout constraintLayout;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +50,12 @@ public class MainActivity2 extends AppCompatActivity {
 
         //variablelen conecten
         lineChart = findViewById(R.id.line_chart);
+
+        //dialogt koppelen
+        dialog = new Dialog(this);
+
+        //constraint koppelen
+        constraintLayout = findViewById(R.id.constraint_2);
 
         //linechart stuff
         ArrayList<Entry> yvalues = new ArrayList<>();
@@ -148,5 +164,20 @@ public class MainActivity2 extends AppCompatActivity {
         LineData data = new LineData(dataSets);
 
         lineChart.setData(data);
+
+
+        //functies
+        click_fun_1();
+    }
+
+    public void click_fun_1(){
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.setContentView(R.layout.dialog1);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+            }
+        });
     }
 }
