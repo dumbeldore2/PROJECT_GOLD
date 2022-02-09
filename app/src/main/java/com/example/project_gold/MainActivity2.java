@@ -13,6 +13,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.LimitLine;
@@ -34,7 +36,11 @@ public class MainActivity2 extends AppCompatActivity {
     Dialog dialog;
 
     //initen constraint
-    ConstraintLayout constraintLayout;
+    ConstraintLayout constraintLayout2;
+
+    //de dialog elementen initen
+    TextView textViewdialog1;
+    EditText editTextDialog1 ,editTextDialog2 , editTextDialog3;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -55,7 +61,7 @@ public class MainActivity2 extends AppCompatActivity {
         dialog = new Dialog(this);
 
         //constraint koppelen
-        constraintLayout = findViewById(R.id.constraint_2);
+        constraintLayout2 = findViewById(R.id.constraint_2);
 
         //linechart stuff
         ArrayList<Entry> yvalues = new ArrayList<>();
@@ -171,12 +177,27 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void click_fun_1(){
-        constraintLayout.setOnClickListener(new View.OnClickListener() {
+        constraintLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //tis getest , de klick werkt
+                //System.out.println("tis geclikt");
                 dialog.setContentView(R.layout.dialog1);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
+                textViewdialog1 = dialog.findViewById(R.id.text_4);
+                editTextDialog1 = dialog.findViewById(R.id.edit_1);
+                editTextDialog2 = dialog.findViewById(R.id.edit_2);
+                editTextDialog3 = dialog.findViewById(R.id.edit_3);
+
+                textViewdialog1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
             }
         });
     }
