@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkPreview 'android-Tiramisu'
     buildToolsVersion "30.0.3"
 
     defaultConfig {
