@@ -51,6 +51,51 @@
                 android:layout_margin="5dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_5"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/text_9"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:gravity="center"
+                android:text="goal"
+                android:textSize="40dp"
+                android:textColor="@color/c_5" />
+
+            <ImageView
+                android:id="@+id/image_1"
+
+                android:layout_width="250dp"
+                android:layout_height="5dp"
+
+                app:layout_constraintEnd_toStartOf="@id/text_9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:src="@drawable/bar_behind_title_c5"/>
+            <ImageView
+                android:id="@+id/image_2"
+
+                android:layout_width="250dp"
+                android:layout_height="5dp"
+
+                app:layout_constraintStart_toEndOf="@id/text_9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:src="@drawable/bar_behind_title_c5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_2"
@@ -110,6 +155,7 @@
                 android:text="tot : "
                 android:textSize="24dp"
                 android:textColor="@color/c_5"/>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_3"
 
@@ -147,6 +193,7 @@
                     android:textColor="@color/c_6"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ProgressBar
                 android:id="@+id/progressBar_1"
 
@@ -179,6 +226,53 @@
                 android:textSize="24dp"
                 android:textColor="@color/c_8"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_6"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/text_10"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:gravity="center"
+                android:text="graph"
+                android:textSize="40dp"
+                android:textColor="@color/c_5" />
+
+            <ImageView
+                android:id="@+id/image_3"
+
+                android:layout_width="250dp"
+                android:layout_height="5dp"
+
+                app:layout_constraintEnd_toStartOf="@id/text_10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:src="@drawable/bar_behind_title_c4"/>
+            <ImageView
+                android:id="@+id/image_4"
+
+                android:layout_width="250dp"
+                android:layout_height="5dp"
+
+                app:layout_constraintStart_toEndOf="@id/text_10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:src="@drawable/bar_behind_title_c4"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_4"
 
