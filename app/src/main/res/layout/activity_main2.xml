@@ -7,170 +7,137 @@
     tools:context=".MainActivity2">
 
     <ImageView
+        android:id="@+id/image_1"
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+
         android:src="@drawable/gradiant_bot"/>
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/image_2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="200dp"
 
-        <!--title-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_1"
+        android:src="@drawable/gradiant_top"
 
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+    <ScrollView
+        android:id="@+id/scrollView_1"
 
-                android:src="@drawable/gradiant_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/text_1"
+        <LinearLayout
+            android:id="@+id/linear_1"
 
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-
-                android:text="home"
-                android:textColor="@color/c_5"
-                android:textSize="52dp"
-
-                android:gravity="center"
-                android:layout_margin="5dp"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--title goal-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/image_1"
 
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="wrap_content"
 
-            <TextView
-                android:id="@+id/text_9"
+            android:orientation="vertical">
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-
-                android:gravity="center"
-                android:text="goal"
-                android:textSize="40dp"
-                android:textColor="@color/c_5" />
-
-            <ImageView
-                android:id="@+id/image_1"
-
-                android:layout_width="250dp"
-                android:layout_height="5dp"
-
-                app:layout_constraintEnd_toStartOf="@id/text_9"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-
-                android:src="@drawable/bar_behind_title_c5"/>
-            <ImageView
-                android:id="@+id/image_2"
-
-                android:layout_width="250dp"
-                android:layout_height="5dp"
-
-                app:layout_constraintStart_toEndOf="@id/text_9"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-
-                android:src="@drawable/bar_behind_title_c5"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--goal part-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_2"
-
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:id="@+id/text_2"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-
-                android:text="goal : "
-                android:textSize="24dp"
-                android:textColor="@color/c_5"/>
-
-            <TextView
-                android:id="@+id/text_3"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:layout_constraintStart_toEndOf="@id/text_2"
-                app:layout_constraintTop_toTopOf="@id/text_2"
-
-                android:text="150€"
-                android:textSize="24dp"
-                android:textColor="@color/c_5"/>
-
-            <TextView
-                android:id="@+id/text_4"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-
-                android:text="17/11/2000"
-                android:textSize="24dp"
-                android:textColor="@color/c_5"/>
-
-            <TextView
-                android:id="@+id/text_5"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:layout_constraintEnd_toStartOf="@id/text_4"
-                app:layout_constraintTop_toTopOf="@id/text_4"
-
-                android:text="tot : "
-                android:textSize="24dp"
-                android:textColor="@color/c_5"/>
-
+            <!--title-->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraint_3"
+                android:id="@+id/constraint_1"
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_2">
+                <ImageView
+                    android:id="@+id/image_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+
+                    android:src="@drawable/gradiant_top"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/text_6"
+                    android:id="@+id/text_1"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="home"
+                    android:textColor="@color/c_5"
+                    android:textSize="52dp"
+
+                    android:gravity="center"
+                    android:layout_margin="5dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--title goal-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_5"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/text_9"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:gravity="center"
+                    android:text="goal"
+                    android:textSize="40dp"
+                    android:textColor="@color/c_5" />
+
+                <ImageView
+                    android:id="@+id/image_4"
+
+                    android:layout_width="250dp"
+                    android:layout_height="5dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/text_9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:src="@drawable/bar_behind_title_c5"/>
+                <ImageView
+                    android:id="@+id/image_5"
+
+                    android:layout_width="250dp"
+                    android:layout_height="5dp"
+
+                    app:layout_constraintStart_toEndOf="@id/text_9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:src="@drawable/bar_behind_title_c5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--goal part-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_2"
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/text_2"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -178,173 +145,238 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
 
-                    android:text="momenteel : "
+                    android:text="goal : "
                     android:textSize="24dp"
                     android:textColor="@color/c_5"/>
 
                 <TextView
-                    android:id="@+id/text_7"
+                    android:id="@+id/text_3"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintStart_toEndOf="@id/text_6"
-                    app:layout_constraintTop_toTopOf="@id/text_6"
+                    app:layout_constraintStart_toEndOf="@id/text_2"
+                    app:layout_constraintTop_toTopOf="@id/text_2"
 
-                    android:text=" + 100€ "
+                    android:text="150€"
                     android:textSize="24dp"
-                    android:textColor="@color/c_6"/>
+                    android:textColor="@color/c_5"/>
+
+                <TextView
+                    android:id="@+id/text_4"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="17/11/2000"
+                    android:textSize="24dp"
+                    android:textColor="@color/c_5"/>
+
+                <TextView
+                    android:id="@+id/text_5"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toStartOf="@id/text_4"
+                    app:layout_constraintTop_toTopOf="@id/text_4"
+
+                    android:text="tot : "
+                    android:textSize="24dp"
+                    android:textColor="@color/c_5"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_3"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_2">
+
+                    <TextView
+                        android:id="@+id/text_6"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        android:text="momenteel : "
+                        android:textSize="24dp"
+                        android:textColor="@color/c_5"/>
+
+                    <TextView
+                        android:id="@+id/text_7"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintStart_toEndOf="@id/text_6"
+                        app:layout_constraintTop_toTopOf="@id/text_6"
+
+                        android:text=" + 100€ "
+                        android:textSize="24dp"
+                        android:textColor="@color/c_6"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar_1"
+
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraint_3"
+
+                    android:layout_marginTop="15dp"
+
+                    android:progress="33"
+                    android:progressDrawable="@drawable/gradiant_progressbar"/>
+
+                <TextView
+                    android:id="@+id/text_8"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="@id/progressBar_1"
+                    app:layout_constraintEnd_toEndOf="@id/progressBar_1"
+                    app:layout_constraintTop_toTopOf="@id/progressBar_1"
+                    app:layout_constraintBottom_toBottomOf="@id/progressBar_1"
+
+
+                    android:text="33%"
+                    android:textSize="24dp"
+                    android:textColor="@color/c_8"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--title graph-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_6"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/text_10"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:gravity="center"
+                    android:text="graph"
+                    android:textSize="40dp"
+                    android:textColor="@color/c_5" />
+
+                <ImageView
+                    android:id="@+id/image_6"
+
+                    android:layout_width="250dp"
+                    android:layout_height="5dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/text_10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:src="@drawable/bar_behind_title_c4"/>
+                <ImageView
+                    android:id="@+id/image_7"
+
+                    android:layout_width="250dp"
+                    android:layout_height="5dp"
+
+                    app:layout_constraintStart_toEndOf="@id/text_10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:src="@drawable/bar_behind_title_c4"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ProgressBar
-                android:id="@+id/progressBar_1"
-
-                style="@android:style/Widget.ProgressBar.Horizontal"
-
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/constraint_3"
-
-                android:layout_marginTop="15dp"
-
-                android:progress="33"
-                android:progressDrawable="@drawable/gradiant_progressbar"/>
-
-            <TextView
-                android:id="@+id/text_8"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:layout_constraintStart_toStartOf="@id/progressBar_1"
-                app:layout_constraintEnd_toEndOf="@id/progressBar_1"
-                app:layout_constraintTop_toTopOf="@id/progressBar_1"
-                app:layout_constraintBottom_toBottomOf="@id/progressBar_1"
-
-
-                android:text="33%"
-                android:textSize="24dp"
-                android:textColor="@color/c_8"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--title graph-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_6"
-
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-
-            <TextView
-                android:id="@+id/text_10"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-
-                android:gravity="center"
-                android:text="graph"
-                android:textSize="40dp"
-                android:textColor="@color/c_5" />
-
-            <ImageView
-                android:id="@+id/image_3"
-
-                android:layout_width="250dp"
-                android:layout_height="5dp"
-
-                app:layout_constraintEnd_toStartOf="@id/text_10"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-
-                android:src="@drawable/bar_behind_title_c4"/>
-            <ImageView
-                android:id="@+id/image_4"
-
-                android:layout_width="250dp"
-                android:layout_height="5dp"
-
-                app:layout_constraintStart_toEndOf="@id/text_10"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-
-                android:src="@drawable/bar_behind_title_c4"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--graph part-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_4"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp">
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/line_chart"
+            <!--graph part-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_4"
 
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--title data set-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_7"
-
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-
-            <TextView
-                android:id="@+id/text_11"
-
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="10dp">
 
-                android:gravity="center"
-                android:text="goal"
-                android:textSize="40dp"
-                android:textColor="@color/c_5" />
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart"
 
-            <ImageView
-                android:id="@+id/image_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
 
-                android:layout_width="250dp"
-                android:layout_height="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                app:layout_constraintEnd_toStartOf="@id/text_9"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                android:src="@drawable/bar_behind_title_c5"/>
-            <ImageView
-                android:id="@+id/image_6"
+            <!--title data set-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_7"
 
-                android:layout_width="250dp"
-                android:layout_height="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
 
-                app:layout_constraintStart_toEndOf="@id/text_9"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+                <TextView
+                    android:id="@+id/text_11"
 
-                android:src="@drawable/bar_behind_title_c5"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
 
-    </LinearLayout>
+                    android:gravity="center"
+                    android:text="goal"
+                    android:textSize="40dp"
+                    android:textColor="@color/c_5" />
+
+                <ImageView
+                    android:id="@+id/image_8"
+
+                    android:layout_width="250dp"
+                    android:layout_height="5dp"
+
+                    app:layout_constraintEnd_toStartOf="@id/text_11"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:src="@drawable/bar_behind_title_c5"/>
+                <ImageView
+                    android:id="@+id/image_9"
+
+                    android:layout_width="250dp"
+                    android:layout_height="5dp"
+
+                    app:layout_constraintStart_toEndOf="@id/text_11"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:src="@drawable/bar_behind_title_c5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
