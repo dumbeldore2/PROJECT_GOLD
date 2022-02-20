@@ -3,11 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/background_button_popup_activty2_constraint2.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/background_constrtaints_popup_activity2_constraint2.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/background_gradiant_popup_activity2_constraint2.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/background_inputfield_popup_activity2_constraint2.xml" value="0.2365" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/bar_behind_title_c1.xml" value="0.2365" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/bar_behind_title_c2.xml" value="0.2365" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/bar_behind_title_c3.xml" value="0.2365" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/bar_behind_title_c4.xml" value="0.2365" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/bar_behind_title_c5.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/gradiant_background_chart_neg_v1.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/gradiant_background_chart_pos_neg_v1.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/gradiant_background_chart_pos_v1.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/gradiant_bot.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/gradiant_progressbar.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/gradiant_top.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/title_line_down_v1.xml" value="0.2365" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/drawable/title_line_up_v1.xml" value="0.2365" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PROJECT_GOLD/app/src/main/res/layout/activity_main2.xml" value="0.33" />
       </map>
     </option>
