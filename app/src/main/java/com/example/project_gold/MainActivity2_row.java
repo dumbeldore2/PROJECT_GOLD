@@ -48,7 +48,7 @@ public class MainActivity2_row extends ArrayAdapter<String> {
 
         setBackground(position,parent);
 
-        textView1.setText(position);
+        textView1.setText(position+"");
         textView2.setText(stringData[position]);
         textView3.setText(stringType[position]);
         textView4.setText(stringAmount[position]);
@@ -58,11 +58,12 @@ public class MainActivity2_row extends ArrayAdapter<String> {
 
     public void setBackground(int i,@NonNull ViewGroup parent){
         int amount = Integer.parseInt(stringAmount[i]);
+        System.out.println(amount);
 
         LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.list_view_row_ma2,parent,false);
 
-        if (amount >= 0){
+        if (amount > 0){
             row.setBackground(ContextCompat.getDrawable(context,R.drawable.background_listview_pos));
         } else {
             row.setBackground(ContextCompat.getDrawable(context,
