@@ -24,16 +24,13 @@ public class MainActivity2_row extends ArrayAdapter<String> {
 
 
     public MainActivity2_row(@NonNull Context c, String datum[] ,String type[] ,
-                             String amount[] ,
-                             int i[]) {
+                             String amount[] ) {
         super(c,R.layout.list_view_row_ma2,datum);
         this.context = c;
 
         this.stringData = datum;
         this.stringType = type;
         this.stringAmount = amount;
-
-        this.anInt = i;
     }
 
 

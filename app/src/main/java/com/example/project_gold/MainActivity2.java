@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
@@ -42,6 +43,18 @@ public class MainActivity2 extends AppCompatActivity {
     TextView textViewdialog1;
     EditText editTextDialog1 ,editTextDialog2 , editTextDialog3;
 
+    //alles met de listview en zijn adapter te maken
+    //de listview initen
+    ListView listView;
+
+    //test data
+    String a[] = {"17/11/2022","17/11/2022","17/11/2022","17/11/2022"};
+    String b[] = {"euro","euro","euro","euro"};
+    String c[] = {"150","-50","59","1"};
+
+    //adapter initen
+    MainActivity2_row mainActivity2_row;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +75,14 @@ public class MainActivity2 extends AppCompatActivity {
 
         //constraint koppelen
         constraintLayout2 = findViewById(R.id.constraint_2);
+
+        //listview stuff
+        //listview initen
+        listView = findViewById(R.id.list_view_1);
+
+        //adapter conecten
+        mainActivity2_row = new MainActivity2_row(this,a,b,c);
+        listView.setAdapter(mainActivity2_row);
 
         //linechart stuff
         ArrayList<Entry> yvalues = new ArrayList<>();
