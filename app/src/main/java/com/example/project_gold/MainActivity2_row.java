@@ -20,7 +20,8 @@ public class MainActivity2_row extends ArrayAdapter<String> {
     String stringData[];
     String stringType[];
     String stringAmount[];
-    int anInt[];
+
+    ImageView imageView1;
 
 
     public MainActivity2_row(@NonNull Context c, String datum[] ,String type[] ,
@@ -40,11 +41,12 @@ public class MainActivity2_row extends ArrayAdapter<String> {
         LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.list_view_row_ma2,parent,false);
         TextView textView1,textView2,textView3,textView4;
-
         textView1 = row.findViewById(R.id.text_1);
         textView2 = row.findViewById(R.id.text_2);
         textView3 = row.findViewById(R.id.text_3);
         textView4 = row.findViewById(R.id.text_4);
+
+        imageView1 = row.findViewById(R.id.image_4);
 
         setBackground(position,parent);
 
@@ -60,13 +62,11 @@ public class MainActivity2_row extends ArrayAdapter<String> {
         int amount = Integer.parseInt(stringAmount[i]);
         System.out.println(amount);
 
-        LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View row = layoutInflater.inflate(R.layout.list_view_row_ma2,parent,false);
-
         if (amount > 0){
-            row.setBackground(ContextCompat.getDrawable(context,R.drawable.background_listview_pos));
+            System.out.println("tzou groen moeten izjn ");
+            imageView1.setBackground(ContextCompat.getDrawable(context,R.drawable.background_listview_pos));
         } else {
-            row.setBackground(ContextCompat.getDrawable(context,
+            imageView1.setBackground(ContextCompat.getDrawable(context,
                     R.drawable.background_listview_neg));
         }
     }
