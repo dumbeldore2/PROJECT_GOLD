@@ -441,6 +441,35 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!--add data set-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_9"
+
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/image_13"
+
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:background="@drawable/add_button"
+
+                    android:text="+"
+                    android:textSize="96dp"
+                    android:textColor="@color/c_8"
+
+                    android:gravity="center"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
 
     </ScrollView>
